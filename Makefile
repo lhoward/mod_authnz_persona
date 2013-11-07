@@ -2,7 +2,7 @@ ifeq ($(APXS_PATH),)
 APXS_PATH=/usr/sbin/apxs
 endif
 
-MY_LDFLAGS=-lcurl -lyajl
+MY_LDFLAGS=-L/usr/local/lib -lbrowserid
 # Note that gcc flags are passed through apxs, so preface with -Wc
 MY_CFLAGS=-Wc,-I. -Wc,-Wall -Wc,-g -Wc,-Wno-unused-function
 SRCS=src/mod_authnz_persona.c src/cookie.c src/verify.c src/hmac.c

@@ -50,9 +50,6 @@
 #include "mod_auth.h"
 #endif
 
-#include <yajl/yajl_tree.h>
-#include <curl/curl.h>
-#include <curl/easy.h>
 #include <assert.h>
 
 /* apache module name */
