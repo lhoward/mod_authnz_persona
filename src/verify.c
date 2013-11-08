@@ -79,7 +79,7 @@ VerifyResult processAssertion(request_rec *r, const char *assertion)
 
     err = BIDVerifyAssertion(context, BID_C_NO_REPLAY_CACHE,
                              assertion, origin,
-                             NULL, 0, time(NULL), 0, &identity,
+                             NULL, 0, apr_time_sec(r->request_time), 0, &identity,
                              &expires, &flags);
     if (err != BID_S_OK)
         goto cleanup;
