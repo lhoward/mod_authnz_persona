@@ -47,8 +47,6 @@
 
 /*
  * process an assertion using the hosted verifier.
- *
- * TODO: local verification
  */
 VerifyResult processAssertion(request_rec *r, const char *assertion)
 {
